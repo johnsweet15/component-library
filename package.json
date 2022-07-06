@@ -1,5 +1,8 @@
 {
-  "name": "component-library",
+  "name": "@johnsweet15/component-library",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/johnsweet15"
+  },
   "version": "1.0.0",
   "description": "",
   "scripts": {
