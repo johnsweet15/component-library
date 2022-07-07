@@ -1,24 +1,6 @@
-import defaultTheme from '../../theme';
+import defaultTheme, { Theme } from '../../theme';
 
-export interface Theme {
-  components?: Components;
-}
-
-type Components = {
-  Button?: Button;
-};
-
-type Button = {
-  backgroundColor?: string;
-};
-
-let theme: Theme = {
-  components: {
-    Button: {
-      backgroundColor: '#0000ff',
-    },
-  },
-};
+let theme: Theme;
 
 const extendTheme = (customTheme: Theme) => {
   theme = {
