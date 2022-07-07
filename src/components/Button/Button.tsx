@@ -9,7 +9,9 @@ export interface ButtonProps
 
 const Button = ({ label, children }: ButtonProps) => {
   return (
-    <button style={{ backgroundColor: theme.Button?.backgroundColor }}>
+    <button
+      style={{ backgroundColor: theme.components?.Button?.backgroundColor }}
+    >
       {label}
     </button>
   );
