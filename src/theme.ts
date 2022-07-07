@@ -3,11 +3,7 @@ export interface Theme {
 }
 
 type Components = {
-  Button?: Button;
-};
-
-type Button = {
-  backgroundColor?: string;
+  Button?: React.CSSProperties;
 };
 
 const theme: Theme = {
