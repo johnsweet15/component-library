@@ -7,11 +7,9 @@ export interface ButtonProps
   mode?: 'primary' | 'secondary';
 }
 
-const Button = ({ label, children }: ButtonProps) => {
+const Button = ({ label, children, style, ...props }: ButtonProps) => {
   return (
-    <button
-      style={{ backgroundColor: theme.components?.Button?.backgroundColor }}
-    >
+    <button style={{ ...theme.components?.Button, ...style }} {...props}>
       {label}
     </button>
   );

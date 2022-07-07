@@ -21,28 +21,11 @@ let theme: Theme = {
 };
 
 const extendTheme = (customTheme: Theme) => {
-  console.log(defaultTheme);
-  console.log(customTheme);
-  console.log({
-    ...defaultTheme,
-    ...customTheme,
-  });
   theme = {
     ...defaultTheme,
     ...customTheme,
   };
 };
-
-// export default theme;
-
-// export interface ThemeProviderProps
-//   extends React.HTMLAttributes<HTMLDivElement> {
-//   theme: Theme;
-// }
-
-// const ThemeProvider = ({ theme: Theme, children }: ThemeProviderProps) => {
-//   return <div>{children}</div>;
-// };
 
 export { theme };
 export default extendTheme;

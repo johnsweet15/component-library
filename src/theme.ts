@@ -19,23 +19,3 @@ const theme: Theme = {
 };
 
 export default theme;
-
-// class Theme {
-//   components: Components;
-
-//   constructor() {
-//     this.components = {
-//       Button: {
-//         backgroundColor: '#0000ff',
-//       },
-//     };
-//   }
-
-//   getComponents = () => {
-//     return this.components;
-//   };
-
-//   setComponents = (components: Components) => {
-//     this.components = components;
-//   };
-// }
