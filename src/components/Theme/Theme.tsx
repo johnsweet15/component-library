@@ -1,4 +1,24 @@
-import defaultTheme, { Theme } from '../../theme';
+import defaultTheme from '../../theme';
+
+export interface Theme {
+  components?: Components;
+}
+
+type Components = {
+  Button?: Button;
+};
+
+type Button = {
+  backgroundColor?: string;
+};
+
+let theme: Theme = {
+  components: {
+    Button: {
+      backgroundColor: '#0000ff',
+    },
+  },
+};
 
 const extendTheme = (customTheme: Theme) => {
   console.log(defaultTheme);
@@ -7,11 +27,13 @@ const extendTheme = (customTheme: Theme) => {
     ...defaultTheme,
     ...customTheme,
   });
-  return {
+  theme = {
     ...defaultTheme,
     ...customTheme,
   };
 };
+
+// export default theme;
 
 // export interface ThemeProviderProps
 //   extends React.HTMLAttributes<HTMLDivElement> {
@@ -22,4 +44,5 @@ const extendTheme = (customTheme: Theme) => {
 //   return <div>{children}</div>;
 // };
 
+export { theme };
 export default extendTheme;
